@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: Ai-angent
+  datasource:
+    url: jdbc:postgresql://rm-cn-1wy4dhdrj0001t6o.rwlb.rds.aliyuncs.com:5432/love-ai-agent
+    username: my_user
+    password: 020905Aa
+  ai:
+    dashscope:
+      api-key: sk-e579d9475bce4804b089909034bb64a8
+      chat:
+        options:
+          model: qwen-plus
+#    mcp:
+#      client:
+##        sse:
+##          connections:
+##            server1:
+##              url: http://localhost:8127
+#        stdio:
+#          servers-configuration: classpath:mcp-server.json
+server:
+  port: 8120
+  servlet:
+    context-path: /api
+# springdoc-openapi????
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.qingluan.aigent.controller
+# knife4j???????????????
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: debug
+# searchApi
+search-api:
+  api-key: BrVaxaZsjxRtXJs5RojPmm5n
+
+
+
+
+

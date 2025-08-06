@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "amap-maps": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@amap/amap-maps-mcp-server"
+      ],
+      "env": {
+        "AMAP_MAPS_API_KEY": "7616684ce77706de12fa00c7adadbada"
+      }
+    },
+    "Love-ai-agent-mcp-service": {
+      "command": "java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dspring.main.web-application-type=none",
+        "-Dlogging.pattern.console=",
+        "-jar",
+        "Love-ai-agent-mcp-search/target/Love-ai-agent-mcp-search-0.0.1-SNAPSHOT.jar"
+      ],
+      "env": {}
+    }
+  }
+}
