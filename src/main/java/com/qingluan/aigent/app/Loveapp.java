@@ -135,9 +135,9 @@ public class Loveapp {
                         .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 10))
                 .advisors(new Logadvisor())
                 //基于本地内存的RAG知识库
-                .advisors(new QuestionAnswerAdvisor(loveappvectorstore))
+                //.advisors(new QuestionAnswerAdvisor(loveappvectorstore))
                 //基于云服务的RAG知识库
-                //.advisors(loveAppCloudRag)
+                .advisors(loveAppCloudRag)
                 //基于PGVector的知识库
                 //.advisors(new QuestionAnswerAdvisor(pgVectorStore))
                 //过滤元信息的查询的RAG知识库
