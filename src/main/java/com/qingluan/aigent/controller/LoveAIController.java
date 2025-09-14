@@ -42,7 +42,7 @@ public class LoveAIController {
         return loveapp.dochatwithragstream(message, chatId);
     }
 
-    @Operation(summary = "SseEmitter异步发送消息//a")
+    @Operation(summary = "SseEmitter异步发送消息//a//")
     @GetMapping("/chat/sseemitter")
     public SseEmitter dochatwithsseemitter(String message, String chatId) {
         SseEmitter sseEmitter = new SseEmitter(120000L);
